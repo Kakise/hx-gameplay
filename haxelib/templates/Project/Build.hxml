@@ -1,0 +1,5 @@
+-cpp .cpp
+-cp src
+-main Main
+-lib hx-gameplay
+-D no-compilation

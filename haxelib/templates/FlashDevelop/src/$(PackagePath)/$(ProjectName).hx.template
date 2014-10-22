@@ -1,0 +1,85 @@
+package $(PackageName);
+
+import cpp.Lib;
+import org.gameplay3d.Game;
+import org.gameplay3d.Platform;
+
+/**
+$(CBI)* TODO
+$(CBI)*/
+class $(ProjectName) extends Game
+{
+    static function make():$(ProjectName) $(CSLB){
+        return new $(ProjectName)(Game.constructNativeObject, [ null ]);
+    }
+
+    /***************************************************************************
+     * MEMBERS                                                                 *
+     **************************************************************************/
+
+    /**
+    $(CBI)* @inheritDoc
+    $(CBI)*/
+    override function initialize():Void $(CSLB){
+        // TODO:
+        //
+    }
+
+    /**
+    $(CBI)* @inheritDoc
+    $(CBI)*/
+    override function finalize():Void $(CSLB){
+        // TODO:
+        //
+    }
+
+    /**
+    $(CBI)* @inheritDoc
+    $(CBI)*/
+    override function update(elapsedTime:Float):Void $(CSLB){
+        // TODO:
+        //
+    }
+
+    /**
+    $(CBI)* @inheritDoc
+    $(CBI)*/
+    override function render(elapsedTime:Float):Void $(CSLB){
+        // TODO:
+        //
+    }
+
+    /**
+    $(CBI)* @inheritDoc
+    $(CBI)*/
+    override public function keyEvent(evt:Int, key:Int):Void $(CSLB){
+        // TODO:
+        //
+    }
+
+    /**
+    $(CBI)* @inheritDoc
+    $(CBI)*/
+    override public function touchEvent(evt:Int, x:Int, y:Int, contactIndex:Int):Void $(CSLB){
+        // TODO:
+        //
+    }
+
+    /**
+    $(CBI)* @inheritDoc
+    $(CBI)*/
+    override public function mouseEvent(evt:Int, x:Int, y:Int, wheelDelta:Int):Bool $(CSLB){
+        // TODO:
+        //
+
+        return false;
+    }
+
+    /***************************************************************************
+     * ENTRY POINT                                                             *
+     **************************************************************************/
+
+	static function main():Void $(CSLB){
+        Platform.create($(ProjectName).make()).enterMessagePump();
+    }
+}

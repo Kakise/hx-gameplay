@@ -1,0 +1,5 @@
+-cpp .cpp
+-cp src
+-main $(PackageDot)$(ProjectName)
+-lib hx-gameplay
+-D no-compilation
