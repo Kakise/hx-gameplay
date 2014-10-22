@@ -7,6 +7,8 @@ If you want to help, send a mail to sazert103@gmail.com
 
 Still testing. Beta release soon.
 
+Gameplay3D official links:
+
 - [Website](http://www.gameplay3d.org/)
 - [Forums](http://www.gameplay3d.org/forums/)
 - [Wiki](https://github.com/blackberry/GamePlay/wiki)
