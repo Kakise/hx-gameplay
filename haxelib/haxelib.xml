@@ -1,5 +1,5 @@
-<project name="hx-gameplay" url="https://github.com/Amadren/hx-gameplay" license="GPL">
-    <user name="mivanchev"/>
+<project name="hx-gameplay" url="http://amadren.github.io/hx-gameplay" license="MIT">
+    <user name="Amadren"/>
     <tag v="cross"/>
 	<tag v="cpp"/>
 	<tag v="game"/>
