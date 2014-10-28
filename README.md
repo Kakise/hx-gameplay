@@ -1,7 +1,7 @@
 ## Hx-Gameplay V1.0 Alpha
 
-Hx-Gameplay is a port of GamePlay3D for HaXe.
-It's based on https://github.com/MIvanchev/hx-gameplay but cleaned, de bugged and updated to work with HaXe 3.1.3
+Hx-gameplay - Haxe bindings for gameplay3d
+It's some bindings for the framework Gameplay3D: http://gameplay3d.org/index.php
 
 If you want to help, send a mail to sazert103@gmail.com
 
