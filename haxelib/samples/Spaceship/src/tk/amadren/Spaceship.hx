@@ -11,9 +11,10 @@ import org.gameplay3d.*;
  */
 class Spaceship extends Game
 {
+
 	var _font:Font;
-	var _x = 175;
-	var _y = 40;
+	var _xflt:Float;
+	var _yflt:Float;
 	
     static function make():Spaceship 
     {
@@ -26,6 +27,10 @@ class Spaceship extends Game
 
     override function initialize():Void 
     {
+		
+		//Initialisation des variables flotantes
+		var _xflt = (getWidth() / 2 - 175);
+		var _yflt = (getHeight() / 2 - 40);
 		
 		//Initialisation de la font
 		var _font = Font.create("res/arial40.gpb");
@@ -52,7 +57,7 @@ class Spaceship extends Game
 		
 		//Render du texte de base ("The Base" comme on dit en anglais :p)
 		_font.start();
-		_font.drawText_Str_IntX2_V4_Int_Bool("Click to Play Again", 25, 60, Vector4.one(), _font.getSize());
+		_font.drawText_Str_IntX2_V4_Int_Bool("Click to Play Again", Std.int(_xflt), Std.int(_yflt), Vector4.one(), _font.getSize());
 		_font.finish();
 		
     }
