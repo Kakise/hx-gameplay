@@ -1,7 +1,8 @@
 ## Hx-Gameplay V1.0 Alpha
 
 Hx-gameplay - Haxe bindings for gameplay3d
-It's some bindings for the framework Gameplay3D: http://gameplay3d.org/index.php
+
+Gameplay3D framework: http://gameplay3d.org/index.php
 
 If you want to help, send a mail to sazert103@gmail.com
 
