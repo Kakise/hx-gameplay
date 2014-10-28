@@ -1,9 +1,9 @@
 package dk.bluewolf.build;
 
-import neko.FileSystem;
+import sys.FileSystem;
 import sys.io.File;
-import neko.Lib;
-import neko.Sys;
+import neko.*;
+
 
 using StringTools;
 
@@ -129,9 +129,9 @@ class Main
         Lib.println("");
         Lib.println(
                 if (!result)
-                    Std.format("STATUS: Failed to install library.")
+                    Std.string("STATUS: Failed to install library.")
                 else
-                    Std.format("STATUS: Library successfully installed.")
+                    Std.string("STATUS: Library successfully installed.")
             );
         Lib.println("");
 
@@ -148,9 +148,9 @@ class Main
         {
             file =
                 if (system == Windows)
-                    Std.format("${directory}\\${file}");
+                    Std.string("${directory}\\${file}");
                 else
-                    Std.format("${directory}/${file}");
+                    Std.string("${directory}/${file}");
 
             if (!FileSystem.exists(file))
                 continue;
@@ -161,7 +161,7 @@ class Main
             }
             else if (file.endsWith(".sh"))
             {
-                var result = Sys.command(Std.format("chmod +x ${file}"));
+                var result = Sys.command(Std.string("chmod +x ${file}"));
                 if (result != 0)
                     return false;
             }
@@ -191,15 +191,15 @@ class Main
             if (system == Windows)
             {
                 copyDirectory(
-                        Std.format("templates\\Project"),
-                        Std.format("${invocationPath}\\${name}")
+                        Std.string("templates\\Project"),
+                        Std.string("${invocationPath}\\${name}")
                     );
             }
             else
             {
                 copyDirectory(
-                        Std.format("templates/Project"),
-                        Std.format("${invocationPath}/${name}")
+                        Std.string("templates/Project"),
+                        Std.string("${invocationPath}/${name}")
                     );
             }
 
@@ -212,8 +212,8 @@ class Main
             {
                 result =
                     copyDirectory(
-                            Std.format("templates\\platforms\\windows-x86"),
-                            Std.format("${invocationPath}\\${name}\\platforms\\windows-x86")
+                            Std.string("templates\\platforms\\windows-x86"),
+                            Std.string("${invocationPath}\\${name}\\platforms\\windows-x86")
                         );
 
                 if (result)
@@ -221,7 +221,7 @@ class Main
                     result =
                         copyFile(
                                 "templates\\platforms\\*windows-x86*.*",
-                                Std.format("${invocationPath}\\${name}")
+                                Std.string("${invocationPath}\\${name}")
                             );
                 }
             }
@@ -229,8 +229,8 @@ class Main
             {
                 result =
                     copyDirectory(
-                            Std.format("templates/platforms/linux-x86"),
-                            Std.format("${invocationPath}/${name}/platforms/linux-x86")
+                            Std.string("templates/platforms/linux-x86"),
+                            Std.string("${invocationPath}/${name}/platforms/linux-x86")
                         );
 
                 if (result)
@@ -238,7 +238,7 @@ class Main
                     result =
                         copyFile(
                                 "templates/platforms/*linux-x86*.*",
-                                Std.format("${invocationPath}/${name}")
+                                Std.string("${invocationPath}/${name}")
                             );
                 }
             }
@@ -255,9 +255,9 @@ class Main
         Lib.println("");
         Lib.println(
                 if (!result)
-                    Std.format("STATUS: Failed to create project \"${name}\".")
+                    Std.string("STATUS: Failed to create project \"${name}\".")
                 else
-                    Std.format("STATUS: Project \"${name}\" successfully created.")
+                    Std.string("STATUS: Project \"${name}\" successfully created.")
             );
         Lib.println("");
 
@@ -295,7 +295,7 @@ class Main
             Lib.println("Invalid platform specified, must be one of:");
             Lib.println("");
             for (_platform in platforms)
-                Lib.println(Std.format("    $_platform"));
+                Lib.println(Std.string("    $_platform"));
             Sys.exit(EXIT_FAILURE);
         }
 
@@ -306,15 +306,15 @@ class Main
             if (system == Windows)
             {
                 copyDirectory(
-                        Std.format("templates\\platforms\\${platform}"),
-                        Std.format("${invocationPath}\\platforms\\${platform}")
+                        Std.string("templates\\platforms\\${platform}"),
+                        Std.string("${invocationPath}\\platforms\\${platform}")
                     );
             }
             else
             {
                 copyDirectory(
-                        Std.format("templates/platforms/${platform}"),
-                        Std.format("${invocationPath}/platforms/${platform}")
+                        Std.string("templates/platforms/${platform}"),
+                        Std.string("${invocationPath}/platforms/${platform}")
                     );
             }
 
@@ -325,9 +325,9 @@ class Main
         {
             result =
                 if (system == Windows)
-                    copyFile(Std.format("templates\\platforms\\*${platform}.*"), invocationPath);
+                    copyFile(Std.string("templates\\platforms\\*${platform}.*"), invocationPath);
                 else
-                    copyFile(Std.format("templates/platforms/*${platform}.*"), invocationPath);
+                    copyFile(Std.string("templates/platforms/*${platform}.*"), invocationPath);
         }
 
         Sys.println("");
@@ -380,7 +380,7 @@ class Main
             {
                 result = copyDirectory(
                             "templates\\platforms\\windows-x86",
-                            Std.format("${installationPath}\\platforms\\windows-x86")
+                            Std.string("${installationPath}\\platforms\\windows-x86")
                         );
             }
 
@@ -405,7 +405,7 @@ class Main
 		}
 		else
 		{
-			var result = Sys.command(Std.format("rmdir /S /Q \"$installationPath\""));
+			var result = Sys.command(Std.string("rmdir /S /Q \"$installationPath\""));
 			Sys.println("");
 			Sys.println(
 					if (result == 0)
@@ -439,20 +439,20 @@ class Main
         var target = arguments[1];
         var srcPath =
             if (system == Windows)
-                Std.format("${invocationPath}\\.cpp");
+                Std.string("${invocationPath}\\.cpp");
             else
-                Std.format("${invocationPath}/.cpp");
+                Std.string("${invocationPath}/.cpp");
         var dstPath =
             if (system == Windows)
-                Std.format("${invocationPath}\\platforms\\.obj\\${target}");
+                Std.string("${invocationPath}\\platforms\\.obj\\${target}");
             else
-                Std.format("${invocationPath}/platforms/.obj/${target}");
+                Std.string("${invocationPath}/platforms/.obj/${target}");
 
         var result =
             if (system == Windows)
-                Sys.command(Std.format("IF NOT EXIST \"${dstPath}\" mkdir \"${dstPath}\""));
+                Sys.command(Std.string("IF NOT EXIST \"${dstPath}\" mkdir \"${dstPath}\""));
             else
-                Sys.command(Std.format("[ -d ${dstPath} ] || mkdir -p ${dstPath}"));
+                Sys.command(Std.string("[ -d ${dstPath} ] || mkdir -p ${dstPath}"));
 
         // Copy the source directory for the specified target.
         //
@@ -461,9 +461,9 @@ class Main
         {
             result =
                 if (system == Windows)
-                    Sys.command(Std.format("xcopy /s /e /h /d /y /q \"${srcPath}\" \"${dstPath}\""));
+                    Sys.command(Std.string("xcopy /s /e /h /d /y /q \"${srcPath}\" \"${dstPath}\""));
                 else
-                    Sys.command(Std.format("rsync -rlpuq ${srcPath}/ ${dstPath}"));
+                    Sys.command(Std.string("rsync -rlpuq ${srcPath}/ ${dstPath}"));
         }
 
         if (result != 0)
@@ -474,9 +474,9 @@ class Main
 
         var buildFile =
             if (system == Windows)
-                Std.format("${dstPath}\\Build.xml");
+                Std.string("${dstPath}\\Build.xml");
             else
-                Std.format("${dstPath}/Build.xml");
+                Std.string("${dstPath}/Build.xml");
 
         try
         {
@@ -505,9 +505,9 @@ class Main
     {
         var result =
             if (system == Windows)
-                Sys.command(Std.format("copy /y \"${file}\" \"${destination}\""));
+                Sys.command(Std.string("copy /y \"${file}\" \"${destination}\""));
             else
-                Sys.command(Std.format("cp -p ${file} ${destination}"));
+                Sys.command(Std.string("cp -p ${file} ${destination}"));
 
         return result == 0;
     }
@@ -519,18 +519,18 @@ class Main
     {
         var result =
             if (system == Windows)
-                Sys.command(Std.format("mkdir \"${destination}\""));
+                Sys.command(Std.string("mkdir \"${destination}\""));
             else
-                Sys.command(Std.format("[ ! -d ${destination} ] && mkdir -p ${destination}"));
+                Sys.command(Std.string("[ ! -d ${destination} ] && mkdir -p ${destination}"));
 
         if (result != 0)
             return false;
 
         result =
             if (system == Windows)
-                Sys.command(Std.format("xcopy /s /e /y \"${source}\" \"${destination}\""));
+                Sys.command(Std.string("xcopy /s /e /y \"${source}\" \"${destination}\""));
             else
-                Sys.command(Std.format("rsync -rlp  ${source}/ ${destination}"));
+                Sys.command(Std.string("rsync -rlp  ${source}/ ${destination}"));
 
         return result == 0;
     }
