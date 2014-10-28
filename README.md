@@ -16,9 +16,4 @@ Gameplay3D official links:
 - [Development Guide](https://github.com/blackberry/GamePlay/wiki#wiki-Development_Guide)
 
 ## Disclaimer
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
-PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR 
-OTHER DEALINGS IN THE SOFTWARE.
+The software is provided "As Is" without any warranty, not even a "Hey, will my computer explode?" one. I'm not responsible of any nuclear war, murder, head explosion beacause of this soft, stress, asociability... I'm also not responsible of you getting fired because you spend too much time on debugging this crapy lib.
