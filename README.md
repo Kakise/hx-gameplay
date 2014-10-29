@@ -1,4 +1,4 @@
-## Hx-Gameplay V1.0 Alpha
+## Hx-Gameplay V1.0 Beta
 
 Hx-gameplay - Haxe bindings for gameplay3d
 
