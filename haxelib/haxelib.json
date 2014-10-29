@@ -11,6 +11,6 @@
       "Initial release, still in beta",
   "contributors": ["Amadren"],
   "dependencies": {
-    "tink_macros": "hxcpp"
+    "hxcpp": ""
   }
 }
