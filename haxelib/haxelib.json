@@ -1,0 +1,16 @@
+{
+  "name": "Hx-Gameplay",
+  "url" :
+      "https://amadren.github.io/hx-gameplay/",
+  "license": "MIT",
+  "tags": ["cross", "game"],
+  "description":
+      "It's a binding library for Gameplay3D",
+  "version": "1.0.0",
+  "releasenote":
+      "Initial release, still in beta",
+  "contributors": ["Amadren"],
+  "dependencies": {
+    "tink_macros": "hxcpp"
+  }
+}
