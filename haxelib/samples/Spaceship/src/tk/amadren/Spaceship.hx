@@ -33,7 +33,7 @@ class Spaceship extends Game
 		var _yflt = (getHeight() / 2 - 40);
 		
 		//Initialisation de la font
-		var _font = Font.create("res/arial40.gpb");
+		var _font = Font.create("res/airstrip.gpb");
 
     }
 

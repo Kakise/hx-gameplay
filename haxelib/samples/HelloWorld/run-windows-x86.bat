@@ -33,3 +33,4 @@ cd ..\..\..
 cd ..\..\..
 
 @ endlocal
+pause

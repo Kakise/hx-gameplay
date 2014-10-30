@@ -1,6 +1,5 @@
 -cpp .cpp
 -cp src
--main tk.amadren.Spaceship
+-main Main
 -lib hx-gameplay
--D haxe3
 -D no-compilation
