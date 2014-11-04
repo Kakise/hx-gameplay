@@ -22,7 +22,7 @@
     <option directives="no-compilation" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
-    <option mainClass="tk.amadren.Spaceship" />
+    <option mainClass="io.amadren.Spaceship" />
     <option enabledebug="False" />
     <option additional="" />
   </build>

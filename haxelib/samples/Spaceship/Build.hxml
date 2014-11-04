@@ -1,5 +1,5 @@
 -cpp .cpp
 -cp src
--main Main
+-main io.amadren.Spaceship
 -lib hx-gameplay
 -D no-compilation
