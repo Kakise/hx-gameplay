@@ -1,4 +1,4 @@
-package tk.amadren;
+package io.amadren;
 
 import cpp.Lib;
 
