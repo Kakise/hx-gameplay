@@ -23,14 +23,14 @@ class Spaceship extends Game
      **************************************************************************/
 	
 	//var _backgroundSound:AudioSource = AudioSource.create_Str("res/game.audio#bgsound");
-
+	var _screenDisplayer = ScreenDisplayer.make();
 	
     override function initialize():Void 
     {
-
+		var _screenDisplayer = ScreenDisplayer.make();
 		//_backgroundSound.setLooped(true);
+		_screenDisplayer.run(Handle.new(), drawsplash(), 1000);
 		
-
     }
 
 
@@ -83,11 +83,23 @@ class Spaceship extends Game
 
         return false;
     }
+
+	public function drawsplash():Void
+	{
+		
+		var batch:SpriteBatch = SpriteBatch.create_Str_Eff_Int("res/logo_powered_white.png");
+		batch.start();
+		batch.draw_FltX9_V4_Bool(getWidth() * 0.5, this.getHeight() * 0.5, 0.0, 512.0, 512.0, 0.0, 1.0, 1.0, 0.0, Vector4.one(), true);
+		batch.finish();
+		
+	}
 	
     /***************************************************************************
      * ENTRY POINT                                                             *
      **************************************************************************/
 
+	
+	
 	static function main():Void 
 	{
 
