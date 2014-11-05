@@ -23,17 +23,14 @@ class Spaceship extends Game
      **************************************************************************/
 	
 	//var _backgroundSound:AudioSource = AudioSource.create_Str("res/game.audio#bgsound");
-	var _font = Font.create("res/airstrip.gpb");
-	var _fontColor = Vector4.make_FltX4(0, 0.5, 1, 1);
+
 	
     override function initialize():Void 
     {
 
 		//_backgroundSound.setLooped(true);
 		
-		_font.start();
-		_font.drawText_Str_IntX2_V4_Int_Bool("Click to Play Again", Std.int(getWidth() / 2 - 175), Std.int(getHeight() / 2 - 40), _fontColor, _font.getSize());
-		_font.finish();
+
     }
 
 
@@ -53,7 +50,15 @@ class Spaceship extends Game
 
     override function render(elapsedTime:Float):Void 
     {
+		var x = Std.int(getWidth() / 2 - 175);
+		var y = Std.int(getHeight() / 2 - 40);
 		
+		var _font = Font.create("res/airstrip.gpb");
+		var _fontColor = Vector4.make_FltX4(0, 0.5, 1, 1);
+		
+		_font.start();
+		_font.drawText_Str_IntX2_V4_Int_Bool("Click to Play Again", x, y, _fontColor, _font.getSize());
+		_font.finish();
 		
     }
 
