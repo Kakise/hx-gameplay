@@ -1,0 +1,8 @@
+audio bgsound
+{
+    path = res/background.ogg
+    looped = true
+    gain = 0.7
+    pitch = 0.5
+    velocity = 0.5 0.0 1.0
+}

@@ -1,7 +1,6 @@
 package io.amadren;
 
 import cpp.Lib;
-
 import org.gameplay3d.*;
 
 /**
@@ -12,6 +11,8 @@ import org.gameplay3d.*;
 class Spaceship extends Game
 {
 	
+
+	
     static function make():Spaceship 
     {
         return new Spaceship(Game.constructNativeObject, [ null ]);
@@ -20,57 +21,39 @@ class Spaceship extends Game
     /***************************************************************************
      * MEMBERS                                                                 *
      **************************************************************************/
-
+	
+	//var _backgroundSound:AudioSource = AudioSource.create_Str("res/game.audio#bgsound");
+	var _font = Font.create("res/airstrip.gpb");
+	var _fontColor = Vector4.make_FltX4(0, 0.5, 1, 1);
+	
     override function initialize():Void 
     {
 
-		var _font:Font;
-		var _xflt:Float;
-		var _yflt:Float;
-		var _x:Int;
-		var _y:Int;
+		//_backgroundSound.setLooped(true);
 		
-
-
+		_font.start();
+		_font.drawText_Str_IntX2_V4_Int_Bool("Click to Play Again", Std.int(getWidth() / 2 - 175), Std.int(getHeight() / 2 - 40), _fontColor, _font.getSize());
+		_font.finish();
     }
 
 
     override function finalize():Void 
     {
-        // TODO:
-        //
+
     }
 
 
     override function update(elapsedTime:Float):Void 
     {
-        // TODO:
-        //
+	
+		//_backgroundSound.play();
+		
     }
 
 
     override function render(elapsedTime:Float):Void 
     {
-		var _backgroundSound = AudioSource.create_Str("res/background.ogg");
-        _backgroundSound.setLooped(true);
-		_backgroundSound.play();
 		
-		//Initialisation des variables flotantes
-		var _xflt = (getWidth() / 2 - 175);
-		var _yflt = (getHeight() / 2 - 40);
-		
-		//Conversion en int
-		var _x = Std.int(_xflt);
-		var _y = Std.int(_yflt);
-		
-		//Initialisation de la font
-		var _font = Font.create("res/airstrip.gpb");
-		var _fontColor = Vector4.make_FltX4(0, 0.5, 1, 1);
-		
-		//Render du texte de base ("The Base" comme on dit en anglais :p)
-		_font.start();
-		_font.drawText_Str_IntX2_V4_Int_Bool("Click to Play Again", _x, _y, _fontColor, _font.getSize());
-		_font.finish();
 		
     }
 
