@@ -2,6 +2,7 @@ package io.amadren;
 
 import cpp.Lib;
 import org.gameplay3d.*;
+import org.gameplay3d.util.Handle;
 
 /**
  * Crée par Amadren.
@@ -22,34 +23,39 @@ class Spaceship extends Game
      * MEMBERS                                                                 *
      **************************************************************************/
 	
-	//var _backgroundSound:AudioSource = AudioSource.create_Str("res/game.audio#bgsound");
-	var _screenDisplayer = ScreenDisplayer.make();
-	
-    override function initialize():Void 
-    {
-		var _screenDisplayer = ScreenDisplayer.make();
-		//_backgroundSound.setLooped(true);
-		_screenDisplayer.run(Handle.new(), drawsplash(), 1000);
-		
-    }
 
+    
+	override function initialize():Void 
+    {
+		
+		var _backgroundSound:AudioSource = AudioSource.create_Str("res/game.audio#bgsound");
+		_backgroundSound.play();
+		
+		var _splash = ScreenDisplayer.make();
+		var test:Handle->Void = null;
+		var test2 = Handle.wrap(null);
+		_splash.run(test, test2, 1000);
+
+    }
+	
 
     override function finalize():Void 
     {
-
+		
     }
 
 
     override function update(elapsedTime:Float):Void 
     {
 	
-		//_backgroundSound.play();
 		
     }
 
 
     override function render(elapsedTime:Float):Void 
     {
+
+
 		var x = Std.int(getWidth() / 2 - 175);
 		var y = Std.int(getHeight() / 2 - 40);
 		
@@ -87,10 +93,11 @@ class Spaceship extends Game
 	public function drawsplash():Void
 	{
 		
-		var batch:SpriteBatch = SpriteBatch.create_Str_Eff_Int("res/logo_powered_white.png");
+		var batch = SpriteBatch.create_Str_Eff_Int("res/logo_powered_white.png");
 		batch.start();
-		batch.draw_FltX9_V4_Bool(getWidth() * 0.5, this.getHeight() * 0.5, 0.0, 512.0, 512.0, 0.0, 1.0, 1.0, 0.0, Vector4.one(), true);
+		batch.draw_FltX9_V4_Bool(this.getWidth() * 0.5, this.getHeight() * 0.5, 0.0, 512.0, 512.0, 0.0, 1.0, 1.0, 0.0, Vector4.one(), true);
 		batch.finish();
+		//clear_Int_V4_Flt_Int(Game_ClearFlags.CLEAR_COLOR_DEPTH, Vector4(0, 0, 0, 1), 1.0, 0);
 		
 	}
 	
