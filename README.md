@@ -1,4 +1,4 @@
-## Hx-Gameplay V1.0 Beta
+## Hx-Gameplay V1.0 RC1
 
 Hx-gameplay - Haxe bindings for gameplay3d
 
@@ -8,7 +8,7 @@ My blog: https://amadren.github.io
 
 If you want to help, send a mail to sazert103@gmail.com
 
-Still fixing some minor bugs. If you've found one, please send an issue.
+After mounths of testing it, I can ensure that it's stable :)
 
 ##Installation:
 ####Requirements:
