@@ -6,7 +6,7 @@
   "tags": ["cross", "game"],
   "description":
       "It's a binding library for Gameplay3D",
-  "version": "1.0.1-beta",
+  "version": "1.0-RC1",
   "releasenote":
       "Important bug fixes.",
   "contributors": ["Amadren"],
