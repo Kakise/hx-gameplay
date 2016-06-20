@@ -4,12 +4,6 @@ Hx-gameplay - Haxe bindings for gameplay3d
 
 Gameplay3D framework: http://gameplay3d.org/
 
-My blog: https://amadren.github.io
-
-If you want to help, send a mail to sazert103@gmail.com
-
-After mounths of testing it, I can ensure that it's stable :)
-
 ##Installation:
 ####Requirements:
 Latest Haxe version available on http://haxe.org/
